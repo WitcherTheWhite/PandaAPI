@@ -16,13 +16,13 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/name")
 public class NameController {
 
-    @GetMapping("/get")
+    @GetMapping("/")
     public String getNameByGet(String name, HttpServletRequest request) {
         System.out.println(request.getHeader("yupi"));
         return "GET 你的名字是" + name;
     }
 
-    @PostMapping("/post")
+    @PostMapping("/")
     public String getNameByPost(@RequestParam String name) {
         return "POST 你的名字是" + name;
     }
